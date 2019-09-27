@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>读书网</title>
+    <style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    a{
+     text-decoration:none;
+    }
+    a:hover{
+     color:#CCC;
+    }
+    #top{
+        width:1200px;
+        height:45px;
+        margin: 0 auto;
+        border-bottom:2px solid #9a9a9a;
+
+    }
+    #top p{
+       font-size:14px;
+       font:normal #666;
+       float:left;
+       width:800px;
+       height:30px;
+       margin:10px 5px 0 5px;
+    }
+    #top p1{
+       font:14px normal;
+       float:right;
+       width:40px;
+       height:30px;
+       margin:10px 5px 0 5px;
+       color:#666;
+    }
+    #header{
+        width: 1200px;
+        margin: 0 auto;
+    }
+    #header img{
+       width:330px;
+       height:85px;
+       float:left;
+       margin:10px 0 0 5px;
+    }
+    #header input{
+       width:390px;
+       height:40px;
+       float:left;
+       margin:35px 5px 30px 120px;
+       font-size:18px;
+       border-color:#09F; 
+    }
+    #search{
+         width:50px;
+         height:50px;
+         margin:25px 5px 30px 0;
+         float:left;
+         }
+    #search img{
+         width:48px;
+         height:40px;
+      } 
+    #search1{
+        width:225px;
+        height:45px;
+        margin:20px 10px 30px 55px;
+        float:left;
+        }
+    #search1 img{
+        width:225px;
+        height:42px;
+        float:left;
+        }
+    #nav{
+        width: 1200px;
+        height: 50px;
+        margin: 0 auto;
+        border-bottom:2px solid #9a9a9a;
+    }
+    #nav ul{
+        width: 1200px;
+        height: 50px;
+    }
+    #nav ul li{
+         float:left;
+         width:150px;
+         margin:0 0 8px 0;
+         text-align:center;
+         line-height: 50px;
+         list-style-type: none;
+      }
+    #nav ul li a{
+         color:#333;
+         font-size:18px;
+         cursor:pointer;
+
+         }
+    #nav ul li a:hover{
+         color:#900;
+        }
+    
+    #main{
+         width:1200px;
+         height:360px;
+         margin: 0 auto;
+        border-bottom:2px solid #9a9a9a;
+        }
+    #left{
+         width:590px;
+         height:300px;
+         margin:15px 0 10px 0;
+         float:left;
+      }
+    #img{
+       width:600px;
+       height:300px;
+       overflow:hidden;
+       float:left;
+    }
+    #arrow{
+       position:relative;
+       top:-180px;
+    } 
+    #previous,#next{
+       width:40px;
+       height:50px;
+       text-align:center;
+       line-height:50px;
+       background:rgba(255,255,255,0.6);
+       font-size:40px;
+       color:#000;
+       cursor:pointer;
+    }
+    #previous{
+       float:left;
+    }
+    #next{
+       float:right;
+    }
+    #circle h1{
+       width:25px;
+       height:25px;
+       background:#F00;
+       text-align:center;
+       line-height:25px;
+       font-size:16px;
+       color:#FFF;
+       float:left;
+       border-radius:50%;
+       position:relative;
+       top:-40px;
+       left:430px;
+       margin:0 0 0 5px;
+       cursor:pointer;
+    }
+    #circle h1:hover{
+       background:#000;
+    }
+    #circle .black{
+       background:#000;
+    }   
+    #middle{
+        width:190px;
+        height:300px;
+        float:left;
+        margin:15px 0 10px 15px;
+        }
+    #middle img{
+          height:100px;
+          width:190px;
+          float:left;
+    }
+    #right{
+       width:390px;
+       margin:5px;
+       float:left;
+    }
+    #tab{
+       height:30px;
+       width:250px;
+       text-align:center;
+       float:left;
+       margin:0 0 0 70px;
+    }   
+    #tab h1{
+       width:80px;
+       height:40px;
+       font-size:16px;
+       font:normal #666;
+       text-align:center;
+       line-height:40px;
+       float:left;
+       cursor:pointer;
+    }
+    #tab h1:hover{
+        background-color:#CCC;
+    }
+    #tab h1.color{
+        background:#ccc;
+      }
+    #page, #page1, #page2, #page3{
+     width:380px;
+     height:252px;
+     overflow:hidden;
+     float:left;
+     cursor:pointer;
+    }  
+   #page{
+     font-size:12px;
+     text-align:center;
+     width:380px;
+     height:252px;
+     float:left;
+     margin:15px 0 10px 15px;
+     }
+   #page1 tr #page2 tr{
+     width:95px;
+     height:36px;
+     font-color:#666;
+     }  
+   #page1 td, #page2 td, #page3 td{
+     border:1px solid #CCC;
+     }
+    h1:hover{
+     background:#6F6;
+      }
+   
+   #recommend{
+     width:1200px;
+     height:40px;
+     margin: 0 auto;
+    }
+    #recommend h2{
+     width:800px;
+     color:#333;
+     margin:15px 0 5px 0;
+     float:left;
+     font-size:22px;
+     
+    }
+  #recommend1{
+    width:390px;
+    height:22px;
+    float:left;
+    margin: 0 auto;
+    }
+  #recommend1 a{
+    font-size:13px;
+    color:#666;
+    margin:15px 0 5px 0;
+    float:left;
+    cursor:pointer;
+    }
+  #recommend1 a:hover{
+    color:#900;
+    }
+  #recommend1 p{
+    color:#CCC;
+    font-size:14px;
+    margin:8px 0 5px 0;
+    float:left;
+    }
+    #online{
+      width:1200px;
+      height:700px;
+      margin: 0 10px 0 150px;
+      float: left;
+      cursor:pointer;
+      border-bottom:2px solid #9a9a9a;
+    }
+  .box-shadow{
+     box-shadow:2px 2px 2px 2px #999;
+    }
+  #book1, #book2, #book3, #book4, #book5, #book6, #book7, #book8, #book9, #book10, #book11, #book12{
+     background:#FFF;
+     width:175px;
+     height:280px;
+     margin:20px 10px 10px 10px;
+     float:left;
+    }
+    #online img{
+      width:160px;
+      height:172px;
+      margin:20px 15px 10px 15px;
+      float:left;
+      
+      }
+    #online p{
+      width:165px;
+      height:50px;
+      margin:5px 20px 0 15px;
+      float:left;
+      text-align:center;
+      font-size:20px;
+      font-weight:blod;
+      color:#333;
+      text-align:center;
+      cursor:pointer;
+    }
+    #online p:hover{
+      color:#F00;
+      }
+    #online h5{
+      width:165px;
+      height:25px;
+      margin:0 20px 10px 15px;
+      float:left;
+      text-align:center;
+      font-size:14px;
+      color:#666;
+      font-weight:200;
+      text-align:center;
+      }
+      #footer{
+        width: 1200px;
+        height:50px;
+        margin: 0 auto;
+        line-height: 50px;
+        
+
+      }
+      #footer p{
+        margin: 0 auto;
+        font-size:14px;
+        color:#666;
+        text-align:center;
+        
+      }
+    </style>
+</head>
+<body>
+    <div id="top" style="color:#666">
+    <p>读书好，好读书，读好书！</p>
+     <a href="#"><p1>注册</p1>
+     </a>
+     <a href="#"><p1>登录</p1></a>
+  </div>
+   <div id="header">
+    <img src="images/logo.jpg">
+      <input class="fl-1" type="搜索" name"search" placeholder="     搜索海量图书"/>
+       
+    <div id="search">
+        <img src="images/search.png">
+    </div>
+    <div id="search1">
+      <img src="images/search1.png">
+    </div>
+  </div>
+  <hr align="left" width=100% color="#FFFFFF" size="2" >
+  <div id="nav">
+    <ul>
+    <li><a href="#">首页</a></li>
+        <li><a href="#">资讯</a></li>
+        <li><a href="#">国学/古籍</a></li>
+        <li><a href="#">出版图书</a></li>
+        <li><a href="#">电子书</a></li>
+        <li><a href="#">网络小说</a></li>
+        <li><a href="#">读书导航</a></li>
+        <li><a href="#">交流区</a></li>
+    </ul>
+  </div>
+<hr align="left" width=100% color="#FFFFFF" size="2" >
+ <div id="main">
+    <div id="left"> 
+        <div id="img">
+            <img src="images/1.png">
+            <img src="images/2.jpg">
+            <img src="images/3.jpg">
+        </div>
+        <div id="arrow">
+            <div id="previous"><</div>
+            <div id="next">></div>
+        </div>
+        <div id="circle">
+            <h1 class="black">1</h1>
+            <h1>2</h1>
+            <h1>3</h1>
+        </div>
+    </div>
+    <div id="middle">
+        <img src="images/4.png">
+        <img src="images/5.png">
+        <img src="images/6.png">
+    </div>
+    <div id="right">
+    <div id="tab">
+      <h1>图书分类</h1>
+      <h1>国学经典</h1>
+      <h1>读书导航</h1>
+    </div>
+    <div id="page" style="color:#666">
+    <div id="page1">
+<table width="380px" height="252px" border="1" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>国学入门</td>
+    <td>文学史</td>
+    <td>纪实文学</td>
+    <td>散文随笔</td>
+    
+  </tr>
+  <tr>
+    <td>世界名著</td>
+    <td>外国小说</td>
+    <td>言情小说</td>
+    <td>历史小说</td>
+  </tr>
+    <tr>
+    <td>当代小说</td>
+    <td>网络小说</td>
+    <td>青春言情</td>
+    <td>人物传记</td>
+  </tr>
+  <tr>
+    <td>艺术理论</td>
+    <td>书法/篆刻</td>
+    <td>文学史</td>
+    <td>绘画</td>
+  </tr>
+  <tr>
+    <td>收藏鉴赏</td>
+    <td>生活时尚</td>
+    <td>社会科学</td>
+    <td>法律</td>
+  </tr>
+   <tr>
+    <td>少儿/童书</td>
+    <td>人文社科</td>
+    <td>历史</td>
+    <td>经济管理</td>
+  </tr>
+  <tr>
+    <td>工业技术</td>
+    <td>自我实现/励志</td>
+    <td>计算机/网络</td>
+    <td><a>→更多</a></td>
+  </tr>
+</table>
+   </div>
+   
+   <div id="page2">
+ <table width="380px" height="252px" border="1" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>红楼梦</td>
+    <td>西游记</td>
+    <td>三国演义</td>
+    <td>水浒传</td>
+  </tr>
+    <tr>
+    <td>史记</td>
+    <td>资治通鉴</td>
+    <td>大学</td>
+    <td>中庸</td>
+  </tr>
+    <tr>
+    <td>论语</td>
+    <td>孟子</td>
+    <td>诗经</td>
+    <td>尚书</td>
+  </tr>
+  <tr>
+    <td>仪礼</td>
+    <td>周易</td>
+    <td>春秋左传</td>
+    <td>尔雅</td>
+  </tr>
+    <td>孝经</td>
+    <td>国语</td>
+    <td>战国策</td>
+    <td>老子</td>
+  </tr>
+  <tr>
+    <td>庄子</td>
+    <td>孙子兵法</td>
+    <td>楚辞</td>
+    <td>古文观止</td>
+  </tr>
+   <tr>
+    <td>吕氏春秋</td>
+    <td>世说新语</td>
+    <td>唐诗三百首</td>
+    <td><a>→更多</a></td>
+  </tr>
+</table>    
+   </div>
+   
+   <div id="page3"> 
+<table width="380px" height="250px" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><img src="images/r1.jpg"></td>
+    <td><img src="images/r2.jpg"></td>
+    <td><img src="images/r3.jpg"></td>
+    <td><img src="images/r4.jpg"></td>
+    <td><img src="images/r5.jpg"></td>
+  </tr>
+  <tr>
+    <td><img src="images/r6.jpg"></td>
+    <td><img src="images/r7.jpg"></td>
+    <td><img src="images/r8.jpg"></td>
+    <td><img src="images/r9.jpg"></td>
+    <td><img src="images/r10.jpg"></td>
+  </tr>
+   <tr>
+    <td><img src="images/r11.jpg"></td>
+    <td><img src="images/r12.jpg"></td>
+    <td><img src="images/r13.jpg"></td>
+    <td><img src="images/r14.jpg"></td>
+  </tr>
+ 
+</table>     
+      </div>
+    </div>
+  </div>
+</div>
+  <div id="recommend">
+     <h2>推荐书目</h2>
+     <div id="recommend1">
+        <a>新闻&nbsp;</a><p>/</p><a>书讯&nbsp;</a><p>/</p><a>书评&nbsp;</a><p>/</p><a>历史&nbsp;</a><p>/</p><a>文化&nbsp;</a><p>/</p><a>艺术&nbsp;</a><p>/</p><a>人物&nbsp;</a><p>/</p><a>书摘&nbsp;</a>
+     </div> 
+  </div>
+  
+  <div id="online">
+    <div id="book1">
+       <img src="images/1-1.jpg">
+       <p>人人都是首席质量官</p>
+       <h5>鲍益新 著</h5>
+    </div>
+    <div id="book2">
+       <img src="images/1-2.jpg">
+       <p>好妈妈胜过好老师2</p>
+       <h5>尹建莉 著</h5>
+    </div>
+    <div id="book3">
+       <img src="images/1-3.jpg">
+       <p>梁冬说庄子《人世间》</p>
+       <h5>梁冬 著</h5>
+    </div>
+    <div id="book4">
+       <img src="images/1-4.jpg">
+       <p>蜥蜴脑法则</p>
+       <h5>[美]吉姆 著</h5>
+    </div>
+    <div id="book5">
+       <img src="images/1-5.jpg">
+       <p>长长的路，我们慢慢走</p>
+       <h5>余光中 著</h5>
+    </div>
+    <div id="book6">
+       <img src="images/1-6.jpg">
+        <p>没有带不好的员工</p>
+       <h5>[西]加布里内尔 著</h5>
+    </div>
+    <div id="book7">
+       <img src="images/1-7.jpg">
+       <p>精致</p>
+       <h5>代芳芳 译</h5>
+    </div>
+    <div id="book8">
+       <img src="images/1-8.jpg">
+       <p>好好听话</p>
+       <h5>学诚法师 著</h5>
+    </div>
+    <div id="book9">
+       <img src="images/1-9.jpg">
+       <p>部分心理学</p>
+       <h5>[美]理查德 著</h5>
+    </div>
+    <div id="book10">
+       <img src="images/1-10.jpg">
+       <p>愿有素心人：陪你数黄昏</p>
+       <h5>青年文摘 著</h5>
+    </div>
+    <div id="book11">
+       <img src="images/1-11.jpg">
+       <p>遇见26个自我</p>
+       <h5>[德]西维亚 著</h5>
+    </div>
+    <div id="book12">
+       <img src="images/1-12.jpg">
+       <p>仙与道</p>
+       <h5>于春松 著</h5>
+    </div>
+    
+    </div> 
+    <div id="footer">
+      <p>如有问题 联系电话：15150073923</p>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"type="text/javascript"></script>
+    <script type="text/javascript">
+var n=0;
+$(document).ready(function(){
+   $("#circle h1").click(function(){
+     n=$("#circle h1").index(this);
+     $("#img img").hide();
+     $("#img img").eq(n).show();
+     $("#circle h1").removeClass("black");
+     $("#circle h1").eq(n).addClass("black"); 
+   });  
+   $("#previous").click(function(){  
+     $("#img img").hide();
+      n--;
+    if(n<0){
+    $("#img img").length-1;
+    }
+    $("#img img").eq(n).show();
+    $("#circle h1").removeClass("black");
+    $("#circle h1").eq(n).addClass("black");
+   }); 
+   $("#next").click(function(){
+     $("#img img").hide();
+      n++;
+    if(n>$("#img img").length-1){
+       n=0;
+    }
+    $("#img img").eq(n).show();
+    $("#circle h1").removeClass("black");
+    $("#circle h1").eq(n).addClass("black");   
+     });
+   /* tab 开始*/
+   var a=0;//当前页
+$(document).ready(function() {
+    $("#tab h1").mouseover(function(){
+    a=$("#tab h1").index(this);
+    $("#page div").hide();
+    $("#page div").eq(a).show();
+    $("#tab h1").removeClass("color");
+    $("#tab h1").eq(a).addClass("color");
+    });
+});
+
+/*********/
+$("#box").animate({"height":220},300);
+$("#box").animate({"width":400},1200);
+$("#box").animate({"margin-left":400},1200);
+$("#box").animate({"margin-right":400},1200);
+
+for(var i=0; i<12; i++){
+  console.log(i);//依次输出0,1,2,3,4,5,6,7,8,9,10,11,12
+  }
+  
+$(document).ready(function() {
+  $("#book1").mouseover(function(){
+    $("#book1").addClass("box-shadow");
+    });
+    $("#book1").mouseout(function(){
+      $("#book1").removeClass("box-shadow");
+      });
+});
+$(document).ready(function() {
+  $("#book2").mouseover(function(){
+    $("#book2").addClass("box-shadow");
+    });
+    $("#book2").mouseout(function(){
+      $("#book2").removeClass("box-shadow");
+      });
+});
+$(document).ready(function() {
+  $("#book3").mouseover(function(){
+    $("#book3").addClass("box-shadow");
+    });
+    $("#book3").mouseout(function(){
+      $("#book3").removeClass("box-shadow");
+      });
+});
+$(document).ready(function() {
+  $("#book4").mouseover(function(){
+    $("#book4").addClass("box-shadow");
+    });
+    $("#book4").mouseout(function(){
+      $("#book4").removeClass("box-shadow");
+      });
+});
+$(document).ready(function() {
+  $("#book5").mouseover(function(){
+    $("#book5").addClass("box-shadow");
+    });
+    $("#book5").mouseout(function(){
+      $("#book5").removeClass("box-shadow");
+      });
+});
+$(document).ready(function() {
+  $("#book6").mouseover(function(){
+    $("#book6").addClass("box-shadow");
+    });
+    $("#book6").mouseout(function(){
+      $("#book6").removeClass("box-shadow");
+      });
+});
+$(document).ready(function() {
+  $("#book7").mouseover(function(){
+    $("#book7").addClass("box-shadow");
+    });
+    $("#book7").mouseout(function(){
+      $("#book7").removeClass("box-shadow");
+      });
+});
+$(document).ready(function() {
+  $("#book8").mouseover(function(){
+    $("#book8").addClass("box-shadow");
+    });
+    $("#book8").mouseout(function(){
+      $("#book8").removeClass("box-shadow");
+      });
+});
+$(document).ready(function() {
+  $("#book9").mouseover(function(){
+    $("#book9").addClass("box-shadow");
+    });
+    $("#book9").mouseout(function(){
+      $("#book9").removeClass("box-shadow");
+      });
+});
+$(document).ready(function() {
+  $("#book10").mouseover(function(){
+    $("#book10").addClass("box-shadow");
+    });
+    $("#book10").mouseout(function(){
+      $("#book10").removeClass("box-shadow");
+      });
+});
+$(document).ready(function() {
+  $("#book11").mouseover(function(){
+    $("#book11").addClass("box-shadow");
+    });
+    $("#book11").mouseout(function(){
+      $("#book11").removeClass("box-shadow");
+      });
+});
+$(document).ready(function() {
+  $("#book12").mouseover(function(){
+    $("#book12").addClass("box-shadow");
+    });
+    $("#book12").mouseout(function(){
+      $("#book12").removeClass("box-shadow");
+      });
+});
+ 
+  });
+</script>
+</body>
+</html>
